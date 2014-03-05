@@ -17,7 +17,7 @@
 					echo '<ul>';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					echo '<li>' . get_the_title() . '</li>';
+					echo '<li>' . get_template_part( 'record', 'settlement' ) . '</li>';
 				}
 					echo '</ul>';
 			} else {
