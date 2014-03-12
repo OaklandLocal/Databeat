@@ -72,6 +72,8 @@
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
+			
+			<?php if ( dynamic_sidebar('officer-footer') ) : else : endif; ?>
 				
 			</div> <!-- #left-area -->
 
