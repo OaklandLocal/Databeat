@@ -17,18 +17,19 @@
 					echo '<ul>';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					echo '<li>' . get_template_part( 'record', 'settlement' ) . '</li>';
+					echo get_template_part( 'record', 'settlement' );
 				}
 					echo '</ul>';
 			} else {
 				// no posts found
+				echo 'We dont have any settlement data for this officer.';
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
 			
-			<h2>Involved Shootings</h2>
-						<?php
+			<h2>Involved Shootings</h2>	
+			<?php
 			$args = array( 'post_type' => 'ois_record', 'posts_per_page' => -1, 'officer' => $term );
 			// The Query
 			$the_query = new WP_Query( $args );
@@ -38,15 +39,17 @@
 					echo '<ul>';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					echo '<li>' . get_the_title() . '</li>';
+					echo get_template_part( 'record', 'ois' );
 				}
 					echo '</ul>';
 			} else {
 				// no posts found
+				echo 'We dont have any involved shootings data for this officer.';
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
+			
 
 			<h2>Awards</h2>
 						<?php
