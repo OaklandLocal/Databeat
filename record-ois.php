@@ -1,0 +1,1 @@
+<li><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>, <?php echo get_post_meta($post->ID, 'incident_date', true); ?>, <?php echo get_post_meta($post->ID, 'victim_name', true); ?>, <?php echo get_post_meta($post->ID, 'victim_status', true); ?></li>
