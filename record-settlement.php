@@ -1,1 +1,1 @@
-<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>, <?php echo get_post_meta($post->ID, 'date_filed_in_court', true); ?>, <?php echo get_post_meta($post->ID, 'plaintiff', true); ?>, $<?php echo get_post_meta($post->ID, 'settlement', true); ?>
+<li><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>, <?php echo get_post_meta($post->ID, 'date_filed_in_court', true); ?>, <?php echo get_post_meta($post->ID, 'plaintiff', true); ?>, <strong>$<?php echo get_post_meta($post->ID, 'settlement', true); ?></strong></li>
