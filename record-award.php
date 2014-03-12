@@ -1,0 +1,1 @@
+<li><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>, <?php echo get_post_meta($post->ID, 'name_of_award', true); ?>, <?php echo get_post_meta($post->ID, 'date_of_award', true); ?>, <?php echo get_post_meta($post->ID, 'award_sender', true); ?></li>
