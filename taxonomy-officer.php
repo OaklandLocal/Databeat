@@ -28,7 +28,7 @@
 			wp_reset_postdata();
 			?>
 			
-			<h2>Involved Shootings</h2>	
+			<h2>Shootings</h2>	
 			<?php
 			$args = array( 'post_type' => 'ois_record', 'posts_per_page' => -1, 'officer' => $term );
 			// The Query
