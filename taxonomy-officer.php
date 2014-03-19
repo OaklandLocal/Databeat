@@ -6,7 +6,7 @@
 			<div id="left-area">
 			
 			<h1><?php single_cat_title( $prefix = '', $display = true ); ?></h1>
-			<h2>Settlements</h2>	
+			<h2>Settled Lawsuits</h2>	
 			<?php
 			$args = array( 'post_type' => 'settlement', 'posts_per_page' => -1, 'officer' => $term );
 			// The Query
@@ -22,7 +22,7 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "We don't have any settlement data for this officer.";
+				echo "Based on available data this officer has not been named in any lawsuits.";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
@@ -44,7 +44,7 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "We don't have any involved shootings data for this officer.";
+				echo "According to the OPD this officer was not involved in any shootings.";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
@@ -67,7 +67,7 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "We don't have any awards data for this officer.";
+				echo "The OPD did not provide awards data for this officer.";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
