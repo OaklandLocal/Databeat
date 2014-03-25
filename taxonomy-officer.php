@@ -22,7 +22,7 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "Based on available data this officer has not been named in any lawsuits.";
+				echo "<p>Based on available data this officer has not been named in any lawsuits.</p>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
@@ -44,7 +44,7 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "According to the OPD this officer was not involved in any shootings.";
+				echo "<p>According to the OPD this officer was not involved in any shootings.</p>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
@@ -67,13 +67,13 @@
 					echo '</ul>';
 			} else {
 				// no posts found
-				echo "The OPD did not provide awards data for this officer.";
+				echo "<p>The OPD did not provide awards data for this officer.</p>";
 			}
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
 			
-			<?php if ( dynamic_sidebar('officer-footer') ) : else : endif; ?>
+			<?php if ( dynamic_sidebar('content-ps') ) : else : endif; ?>
 				
 			</div> <!-- #left-area -->
 

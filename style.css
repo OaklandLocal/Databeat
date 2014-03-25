@@ -5,11 +5,15 @@ Description:    Child theme for Divi, used for the Oakland Police Beat
 Author:         maiki
 Author URI:     http://interi.org
 Template:       Divi
-Version:        0.6.0
+Version:        0.7.0
 */
 
 @import url("../Divi/style.css");
 
 h2 {
     padding-top: 10px;
+}
+
+#left-area .textwidget {
+    padding-top: 25px;
 }

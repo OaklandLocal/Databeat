@@ -15,6 +15,9 @@
 
 						wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
 					?>
+					
+					<?php if ( dynamic_sidebar('content-ps') ) : else : endif; ?>
+								
 					</div> <!-- .entry-content -->
 
 
