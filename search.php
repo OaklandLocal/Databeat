@@ -32,13 +32,10 @@
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						
 					<?php
-						et_divi_post_meta();
 
-						if ( 'post' == get_post_type() )
-							truncate_post( 500 );
-						else
 							the_content();
 					?>
+
 
 					</article> <!-- .et_pb_post -->
 			<?php
