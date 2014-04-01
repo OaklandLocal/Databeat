@@ -32,7 +32,9 @@
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						
 					<?php
-
+						if ( 'post' == get_post_type() )
+							the_excerpt();
+						else
 							the_content();
 					?>
 
