@@ -73,6 +73,25 @@
 			wp_reset_postdata();
 			?>
 			
+			<?php
+			$args = array( 'post_type' => 'note', 'posts_per_page' => -1, 'officer' => $term );
+			// The Query
+			$the_query = new WP_Query( $args );
+
+			// The Loop
+			if ( $the_query->have_posts() ) {
+					echo '<h2>Notes</h2>';
+					echo '<ul>';
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+					echo get_template_part( 'record', 'note' );
+				}
+					echo '</ul>';
+			}
+			/* Restore original Post Data */
+			wp_reset_postdata();
+			?>
+			
 			<?php if ( dynamic_sidebar('content-ps') ) : else : endif; ?>
 				
 			</div> <!-- #left-area -->
